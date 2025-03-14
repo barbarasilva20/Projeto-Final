@@ -15,6 +15,7 @@ cd ..
 
 # Interpretar os argumentos:
 <<<<<<< HEAD
+<<<<<<< HEAD
 # (Complete o código com as outras funcionalidades usando o elif)
 if [ "$1" = "-p" ] ; then
   cat /senhas/senhasgeradas.txt    
@@ -22,6 +23,8 @@ elif [ "$1" = "-h" ] ; then
   echo -e "Bem vindo ao gerar-senha! Versão 1.0, (c) 2025, Fulano de Tal,DIMAp, UFRN
 Uso: ./gerar-senha.sh [OPÇÕES]:
 =======
+=======
+>>>>>>> limparSenhas
 if [ "$1" = "-h" ]; then
   echo -e "Bem vindo ao password-generator! Versão 1.0, (c) 2025, Fulano de Tal,DIMAp, UFRN
 Uso: ./password-generator.sh [OPÇÕES]:
@@ -40,6 +43,9 @@ O comportamento padrão do script é gerar uma senha de 8 caracteres minúsculos
 
 elif [ "$1" = "-c "]; then
   >/senhas/senhasgeradas.txt
+<<<<<<< HEAD
+>>>>>>> limparSenhas
+=======
 >>>>>>> limparSenhas
 fi
 
