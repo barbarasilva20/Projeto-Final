@@ -30,10 +30,12 @@ elif [ "$1" = "-c" ]; then
 elif [ "$1" = "-t" ] ; then
   cd senhas
   openssl enc -aes-256-cbc -pbkdf2 -in senhasgeradas.txt -out senhasgeradas.txt.enc
+  rm senhasgeradas.txt
   cd ..
 elif [ "$1" = "-d" ] ; then
   cd senhas
   openssl enc -aes-256-cbc -d -pbkdf2 -in senhasgeradas.txt.enc -out senhasgeradas.txt
+  rm senhasgeradas.txt.enc
   cd ..
 else
   cd senhas
