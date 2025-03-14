@@ -7,7 +7,6 @@ CARACTERES="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^
 senha=$(cat /dev/urandom | tr -dc "$CARACTERES" | fold -w 10 | head -n 1)
 
 # Interpretar os argumentos:
-# (Complete o código com as outras funcionalidades usando o elif)
 if [ "$1" = "-h" ]; then
   echo -e "Bem vindo ao password-generator! Versão 1.0, (c) 2025, Fulano de Tal,DIMAp, UFRN
 Uso: ./password-generator.sh [OPÇÕES]:
@@ -19,6 +18,9 @@ Opções:
 -h : Exibir esse menu
 
 O comportamento padrão do script é gerar uma senha de 8 caracteres minúsculos."
+
+elif [ "$1" = "-c "]; then
+  >/senhas/senhasgeradas.txt
 fi
 
 # Imprime a senha gerada
