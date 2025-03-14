@@ -5,16 +5,16 @@ CARACTERES="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^
 
 # Essa linha gera uma senha quando o script é executado
 senha=$(cat /dev/urandom | tr -dc "$CARACTERES" | fold -w 10 | head -n 1)
-if [ !-e senhasgeradas.txt ]; then
+if [ !-e senhasgeradas.txt ] ; then
   touch /senhas/senhasgeradas.txt
 fi 
 cat $senha >> /senhas/senhasgeradas.txt
 
 # Interpretar os argumentos:
 # (Complete o código com as outras funcionalidades usando o elif)
-if [ "$1" = "-p" ]; then
+if [ "$1" = "-p" ] ; then
   cat /senhas/senhasgeradas.txt    
-elif [ "$1" = "-h" ]; then
+elif [ "$1" = "-h" ] ; then
   echo -e "Bem vindo ao gerar-senha! Versão 1.0, (c) 2025, Fulano de Tal,DIMAp, UFRN
 Uso: ./gerar-senha.sh [OPÇÕES]:
 
