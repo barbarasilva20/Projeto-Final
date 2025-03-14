@@ -18,6 +18,8 @@ Opções:
 
 O comportamento padrão do script é gerar uma senha de 10 caracteres minúsculos.
 
+É necessário a existência da pasta "senhas" no mesmo diretorio do .sh para o funcionamento do script.
+
 Gerador de senhas feito por André Lucas Gonçalves Gomes e Barbara Lima Cordeiro da Silva para o curso de Linux/Git do PET-CC.
 
 
