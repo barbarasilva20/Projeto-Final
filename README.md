@@ -2,7 +2,7 @@
 
 Bem vindo ao password-generator! Versão 1.0, (c) 2025, André Gomes e Barbara Silva, DIMAp, UFRN.
 
-Uso: ./password-generator.sh [OPÇÕES]:
+Uso: ./gerar-senha.sh [OPÇÕES]:
 
 Opções:
 
