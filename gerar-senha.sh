@@ -19,11 +19,21 @@ Opções:
 -p : Listar as senhas geradas
 -c : Limpar as senhas do arquivo passwords.txt
 -h : Exibir esse menu
+-t : Criptografa o arquivo onde está as senhas geradas
+-d : Descriptografa o arquivo onde está as senhas geradas
 O comportamento padrão do script é gerar uma senha de 10 caracteres minúsculos."
 
 elif [ "$1" = "-c" ]; then
   cd senhas
   >senhasgeradas.txt
+  cd ..
+elif [ "$1" = "-t" ] ; then
+  cd senhas
+  openssl enc -aes-256-cbc -pbkdf2 -in senhasgeradas.txt -out senhasgeradas.txt.enc
+  cd ..
+elif [ "$1" = "-d" ] ; then
+  cd senhas
+  openssl enc -aes-256-cbc -d -pbkdf2 -in senhasgeradas.txt.enc -out senhasgeradas.txt
   cd ..
 else
   cd senhas
