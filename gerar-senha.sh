@@ -5,10 +5,13 @@ CARACTERES="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^
 
 # Essa linha gera uma senha quando o script é executado
 senha=$(cat /dev/urandom | tr -dc "$CARACTERES" | fold -w 10 | head -n 1)
+
+cd senhas
 if [ ! -e senhasgeradas.txt ] ; then
-  touch /senhas/senhasgeradas.txt
+  touch senhasgeradas.txt
 fi 
-cat $senha >> /senhas/senhasgeradas.txt
+echo "$senha" >> senhasgeradas.txt
+cd ..
 
 # Interpretar os argumentos:
 # (Complete o código com as outras funcionalidades usando o elif)
@@ -25,7 +28,7 @@ Opções:
 -h : Exibir esse menu
 
 O comportamento padrão do script é gerar uma senha de 10 caracteres minúsculos."
-
+fi
 
 # Imprime a senha gerada
 # Adicione aqui também a implementação do código que salva a senha no passwords.txt e cria o arquivo caso ele não exista
