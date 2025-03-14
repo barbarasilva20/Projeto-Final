@@ -5,7 +5,7 @@ CARACTERES="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^
 
 # Essa linha gera uma senha quando o script é executado
 senha=$(cat /dev/urandom | tr -dc "$CARACTERES" | fold -w 10 | head -n 1)
-if [ !-e senhasgeradas.txt ] ; then
+if [ ! -e senhasgeradas.txt ] ; then
   touch /senhas/senhasgeradas.txt
 fi 
 cat $senha >> /senhas/senhasgeradas.txt
