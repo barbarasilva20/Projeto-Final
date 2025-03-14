@@ -1,4 +1,4 @@
-# Gerados de senhas
+# Gerador de senhas
 
 Bem vindo ao password-generator! Versão 1.0, (c) 2025, André Gomes e Barbara Silva, DIMAp, UFRN.
 
