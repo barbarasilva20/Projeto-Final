@@ -10,6 +10,10 @@ Opções:
 
 -c : Limpar as senhas do arquivo passwords.txt
 
+-t : Criptografa o arquivo onde está as senhas geradas
+
+-d : Descriptografa o arquivo onde está as senhas geradas
+
 -h : Exibir esse menu
 
 O comportamento padrão do script é gerar uma senha de 10 caracteres minúsculos.
